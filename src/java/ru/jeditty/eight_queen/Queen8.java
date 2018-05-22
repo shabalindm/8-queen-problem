@@ -1,7 +1,6 @@
-package ru.jeditty.eigth_queen;
+package ru.jeditty.eight_queen;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -9,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Queen8 {
 
-    /**
+    /**eight
      *
      * @param p1
      * @param p2

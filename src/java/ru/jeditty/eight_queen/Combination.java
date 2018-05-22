@@ -1,4 +1,4 @@
-package ru.jeditty.eigth_queen;
+package ru.jeditty.eight_queen;
 
 /**
  * LinkedList of Positions
