@@ -50,7 +50,7 @@ public class Queen8 {
     }
 
     /**
-     * @return all position of 8 queen on a chessboard that do not hit each other
+     * @return all positions of 8 queen on a chessboard that do not hit each other
      */
   public Stream<Combination> find(){
         Stream<Combination> combinations = getPositionsAtLine(0)
