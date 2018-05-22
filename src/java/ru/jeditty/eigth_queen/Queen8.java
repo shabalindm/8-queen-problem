@@ -15,7 +15,7 @@ public class Queen8 {
      * @param p2
      * @return true if queens at positions p1 and p2 hit each other
      */
-    boolean hit(Position p1, Position p2){
+    private boolean hit(Position p1, Position p2){
         return p1.x == p2.x
                 || p1.y == p2.y
                 || p1.x - p2.x == p1.y - p2.y
@@ -27,7 +27,7 @@ public class Queen8 {
      * @param p
      * @return true, if queen at position p hits any of the queen from combination
      */
-    boolean hit(Combination combination, Position p){
+    private boolean hit(Combination combination, Position p){
         while (combination != null){
             Position p1 = combination.position;
 
@@ -44,13 +44,15 @@ public class Queen8 {
 
 
 
-    Stream<Position> getPositionsAtLine(int x){
+  private  Stream<Position> getPositionsAtLine(int x){
         return IntStream.range(0, 8).boxed().
                 map(y -> new Position(x, y));
     }
 
-
-    Stream<Combination> find(){
+    /**
+     * @return all position of 8 queen on a chessboard that do not hit each other
+     */
+  public Stream<Combination> find(){
         Stream<Combination> combinations = getPositionsAtLine(0)
                 .map(Combination::new);
 
@@ -69,9 +71,9 @@ public class Queen8 {
      *
      * @param combination
      * @param x
-     * @return positions for the queen at line x, that are not hit by any of the queen from combination
+     * @return positions for the queen at line x, that is not hit by any of the queen from combination
      */
-    private Stream<Position> getSavePositions(Combination combination, int x) {
+    Stream<Position> getSavePositions(Combination combination, int x) {
         return getPositionsAtLine(x)
                 .filter(position -> ! hit(combination, position));
     }

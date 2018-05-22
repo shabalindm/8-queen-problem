@@ -3,7 +3,7 @@ package ru.jeditty.eigth_queen;
 /**
  * LinkedList of Positions
  */
-class Combination {
+public class Combination {
     final Position position;
     final Combination next;
 
@@ -12,11 +12,11 @@ class Combination {
         this.next = next;
     }
 
-    Combination(Position position) {
+   public Combination(Position position) {
         this(position, null);
     }
 
-    Combination add(Position p) {
+   public Combination add(Position p) {
         return new Combination(p, this);
     }
 
