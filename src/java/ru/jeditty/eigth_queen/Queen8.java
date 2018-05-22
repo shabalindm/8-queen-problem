@@ -80,7 +80,7 @@ public class Queen8 {
     public static void main(String[] args) {
         List<Combination> combinations = new Queen8().find().collect(Collectors.toList());
 
-        //assertion: there exist 92 solution of 8 queen problem
+        //assertion: there exist 92 solutions of 8 queen problem
         if(92 != combinations.size()){
             throw new RuntimeException();
         }
