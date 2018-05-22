@@ -70,7 +70,7 @@ public class Queen8 {
      *
      * @param combination
      * @param x
-     * @return positions for the queen at line x, that is not hit by any of the queen from combination
+     * @return positions for the queen at line x, that are not hit by any of the queen from combination
      */
     Stream<Position> getSavePositions(Combination combination, int x) {
         return getPositionsAtLine(x)
